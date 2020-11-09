@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 key-crypt
+  p Welcome to key-crypt
+  br
+  table.table
+    tr
+      th password
+      th info
+  tbody
+    each source_info in sources
+      tr
+        td #{source_info.password}
+        td #{source_info.info}
