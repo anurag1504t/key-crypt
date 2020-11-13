@@ -14,5 +14,9 @@
     "mongoose": "^5.10.7",
     "morgan": "~1.9.1",
     "pug": "^3.0.0"
-  }
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

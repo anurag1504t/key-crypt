@@ -4,7 +4,7 @@ var router = express.Router();
 const Sources = require('../models/source');
 
 /* GET home page. */
-router.route('/')
+router.route('/data')
 .get((req, res, next) => {
     Sources.find()
     .then((sources) => {
@@ -15,9 +15,9 @@ router.route('/')
     
 })
 .post((req, res, next) => {
-    console.log(req);
+    //console.log(req);
     if (req.body != null) {
-        Sources.create({password: req.body.password, info:req})
+        Sources.create({password: req.body.password, info:req.body.info})
         .then((result) => {
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
@@ -32,5 +32,6 @@ router.route('/')
     }
 
 });
+
 
 module.exports = router;

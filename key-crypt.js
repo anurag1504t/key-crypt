@@ -50,7 +50,9 @@ function processFiles(dir,operation,pass){
 		  	      	return;
 		  	    }
 		  	    if(stat.isFile()){
-		  	    	if(operation === "encrypt"){encrypt({ file: dir+'/'+file, password: pass },renameFile);}
+		  	    	if(operation === "encrypt"){
+						  encrypt({ file: dir+'/'+file, password: pass },renameFile);
+						}
 		  	    	if(operation === "decrypt"){decrypt({ file: dir+'/'+file, password: pass },renameFile);}
 		  	    }
 		  	    else if(stat.isDirectory()){
