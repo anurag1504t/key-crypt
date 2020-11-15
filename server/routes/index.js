@@ -8,7 +8,7 @@ router.route('/data')
 .get((req, res, next) => {
     Sources.find()
     .then((sources) => {
-        res.render('index', sources);
+        res.render('index', {informations: sources});
     }, (err) => next(err))
     .catch((err) => next(err));
     // console.log(req);
